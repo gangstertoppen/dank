@@ -1,0 +1,392 @@
+<html>
+<head>
+<title>Survey</title>
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+<link href="/default.css" rel="stylesheet" />
+<style>
+	body {
+		background-color: #ffffff;
+    	color: #000000;
+	}
+
+	a:link { color:#ff6000; }
+	a:visited { color:#ff6000; }
+	td.currentpage { color:#000000; }
+
+	form {
+		margin-top:30px;
+		margin-left:7%;
+		margin-right:7%;
+		font-size:20px;
+	}
+
+	div#note {
+		font-size:0.5em;
+		margin-top:3px;
+	}
+
+	li.question {
+		margin-top: 75px;
+	}
+
+	input[type="text"] {
+		font-family: sans-serif;
+		font-size: 22px;
+		margin: 3px 0;
+		padding: 2px;
+	}
+
+	textarea {
+		font-family: sans-serif;
+		font-size: 19px;
+		margin: 3px 0;
+		padding: 2px;
+		width:560px;
+		/* height:94px; */
+		resize:vertical;
+	}
+
+	img.dubs {
+		margin-top:30px;
+	}
+
+	table.rateTable {
+		margin-top:7px;
+	}
+
+	td.radioCell {
+		width: 35px;
+		height: 25px;
+		text-align: center;
+	}
+
+	td.scaleCell {
+		width: 35px;
+		height: 25px;
+		text-align: center;
+		font-size:22px;
+	}
+
+	select {
+		font-size: 18px;
+		padding: 5px 2px;
+		margin-top: 6px;
+		margin-left: 3px;
+		width: 200px;
+	}
+
+	div#intermission {
+		margin-top:50px;
+		margin-bottom:50px;
+	}
+
+	img#intermission {
+		margin-top: 1100px;
+	}
+
+	h2#intermission {
+		margin-bottom: 1100px;
+	}
+
+	input[type="submit"] {
+		font-size: 22px;
+		padding: 10px 20px;
+		margin:75px 0px 50px 0px;
+	}
+
+	div#postbackMessage {
+		font-size: 32px;
+		color: #0000ff;
+		width: 100%;
+		text-align: center;
+		margin:20px 0px;
+	}
+</style>
+</head>
+
+
+
+<body>
+<center><br/><div class='pagetitle'>Survey</div><img src='/cade/cade1.gif' style='display:none;'><img src='/cade/cade2.gif' style='display:none;'><table class='hotbar'><tr><td class='limiter'>-{</td><td><a href='/'>Home</a></td><td class='seperator'>✣</td><td><a href='/swamp'>The Swamp</a></td><td class='seperator'>✣</td><td><a href='/bane'>Bane</a></td><td class='seperator'>✣</td><td><a href='http://esfores.bandcamp.com/' target='_blank'>MySpace</a></td><td class='seperator'>✣</td><td><a href='/lel'>Lel</a></td><td class='seperator'>✣</td><td><a href='/donut'>Pastries</a></td><td class='seperator'>✣</td><td><a href='/dubs'>Dubs</a></td><td class='seperator'>✣</td><td><a href='/anime'>Anime</a></td><td class='seperator'>✣</td><td><a href='/music'>Music</a></td><td class='seperator'>✣</td><td><a href='/culture'>Culture</a></td><td class='seperator'>✣</td><td><a href='/kevin'>Kevin</a></td><td class='seperator'>✣</td><td><a href='/elements'>Lelements</a></td><td class='seperator'>✣</td><td><a href='/s4stan'>[s4s]-tan</a></td><td class='seperator'>✣</td><td><a href='/yee'>Yee</a></td><td class='seperator'>✣</td><td><a href='/dose'>Dose</a></td><td class='seperator'>✣</td><td><a href='/birds'>Birds</a></td><td class='seperator'>✣</td><td><a href='/froge'>Froge</a></td><td class='seperator'>✣</td><td><a href='/bean'>Bean</a></td><td class='seperator'>✣</td><td><a href='/graveyard'>Graveyard</a></td><td class='limiter'>}-</td></tr></table><table class='hotbar'><tr><td class='limiter'>-{</td><td><a href='/awoo'>Awoo</a></td><td class='seperator'>✣</td><td><a href='/spooky'>Spook</a></td><td class='seperator'>✣</td><td><a href='/doge'>Doge</a></td><td class='seperator'>✣</td><td><a href='/honk'>Honk</a></td><td class='seperator'>✣</td><td><a href='/robot'>Robot</a></td><td class='seperator'>✣</td><td><a href='/knishes'>Knishes</a></td><td class='seperator'>✣</td><td><a href='/he'>HE</a></td><td class='seperator'>✣</td><td><a href='/brothermanbill'>Bill</a></td><td class='seperator'>✣</td><td><a href='/pardo'>Pardo</a></td><td class='seperator'>✣</td><td><a href='/lemonline'>Lemonline</a></td><td class='seperator'>✣</td><td><a href='/smugzone'>Smug</a></td><td class='seperator'>✣</td><td><a href='/sponsors'>Sponsors</a></td><td class='seperator'>✣</td><td><a href='/ses'>Suddenly</a></td><td class='seperator'>✣</td><td><a href='/vodka'>Vodka</a></td><td class='seperator'>✣</td><td><a href='/buneraven'>Bune Raven</a></td><td class='seperator'>✣</td><td><a href='/weed'>420</a></td><td class='seperator'>✣</td><td><a href='/walruse'>Walruse</a></td><td class='seperator'>✣</td><td><a href='/ass'>Ass</a></td><td class='seperator'>✣</td><td><a href='/tread'>Tread</a></td><td class='limiter'>}-</td></tr></table><table class='hotbar'><tr><td class='limiter'>-{</td><td><a href='/thirdking'>Third King</a></td><td class='seperator'>✣</td><td><a href='/wildcard'>Wildcard</a></td><td class='seperator'>✣</td><td><a href='/badtime'>Bad Time</a></td><td class='seperator'>✣</td><td><a href='/mallcop'>Mall Cop</a></td><td class='seperator'>✣</td><td><a href='/nice'>Nice Page</a></td><td class='seperator'>✣</td><td><a href='/fashion'>Fashion</a></td><td class='seperator'>✣</td><td><a href='/sonic'>Sonic</a></td><td class='seperator'>✣</td><td><a href='/ciass'>CIAss</a></td><td class='seperator'>✣</td><td><a href='/fortune'>Fortune</a></td><td class='seperator'>✣</td><td><a href='/foodgore'>Food Gore!</a></td><td class='seperator'>✣</td><td><a href='/fef'>Fef</a></td><td class='seperator'>✣</td><td><a href='/snekcourt'>Snake Court</a></td><td class='seperator'>✣</td><td><script src='/scripts/cade.js' type='text/javascript'></script><a href='javascript:void(0)' onclick='addCade()'>Cade</a></td><td class='seperator'>✣</td><td><a href='/secret'>Secret</a></td><td class='seperator'>✣</td><td><a href='/flash'>Flash</a></td><td class='seperator'>✣</td><td><a href='/suggestionbox'>Suggestions</a></td><td class='limiter'>}-</td></tr></table><br/></center>
+
+<script type='text/javascript'>
+function playMusic() {
+	document.getElementById('musicfile').play();
+}
+
+function stopMusic() {
+	document.getElementById('musicfile').pause();
+	document.getElementById('musicfile').currentTime = 0;
+}
+
+function checkDubs(e) {
+	if (e.checked == true) {
+		console.debug("nigger");
+		document.getElementById('dubs1').style = 'display:none;';
+		document.getElementById('dubs2').style = 'display:block;';
+	} else {
+		document.getElementById('dubs1').style = 'display:block;';
+		document.getElementById('dubs2').style = 'display:none;';
+	}
+}
+
+function cowe(stage) {
+	if (stage == 3) {
+		document.getElementById('coweContNice').style = 'display:block;';
+	} else {
+		document.getElementById('coweContNice').style = 'display:none;';
+		document.getElementById('coweThoughts').value = '';
+	}
+	if (stage == 2) {
+		document.getElementById('coweContNotNice').style = 'display:block;';
+	} else {
+		document.getElementById('coweContNotNice').style = 'display:none;';
+	}
+	if (stage == 1) {
+		document.getElementById('coweCont').style = 'display:block;'
+	} else if (stage < 1) {
+		document.getElementById('coweCont').style = 'display:none;'
+		document.getElementById('coweCont1').checked = false;
+		document.getElementById('coweCont2').checked = false;
+	}
+
+
+}
+</script>
+
+<audio src="every_day_is_night.mp3" type="audio/mpeg" id="musicfile" volume='0.8' loop></audio>
+<form action="submit/" method="post">
+<!-- DON'T FORGET TO ADD taxindex -->
+
+<div id='explanation'>
+This survey helps us here at dankmaymays.com (trademark pending) deliver to you, the memer, the best possible browsing experience. Filling it in goes a long way towards making dankmaymays.com better for future generations.
+</div> 
+<div id='note'>Note: all information provided remains completely anonymous and confidential, mostly due to the fact dankmaymays.com has yet to reach the technological level necessary to track its users.</span>
+</div>
+
+<ol id='questions' type='1'>
+
+<li class='question'>
+To begin, please enter your name:<br/>
+<input type='text' name='USERNAME' maxlength='50'>
+</li>
+
+<li class='question'>
+Would you like to listen to nice music while filling in this survey?<br/>
+<input type='radio' name='MUSIC' value='YES' id='music1' onchange='playMusic();'>
+<label for='music1'>Yes</label>
+<input type='radio' name='MUSIC' value='NO' id='music2' onchange='stopMusic();'>
+<label for='music2'>No</label>
+</li>
+
+<li class='question'>
+How often do you visit dankmaymays.com?<br>
+<input type='radio' name='VISIT_RATE' value='V1' id='visitRate1'>
+<label for='visitRate1'>Once per day</label><br/>
+<input type='radio' name='VISIT_RATE' value='V2' id='visitRate2'>
+<label for='visitRate2'>2 times per day</label><br/>
+<input type='radio' name='VISIT_RATE' value='V3' id='visitRate3'>
+<label for='visitRate3'>3 times per day</label><br/>
+<input type='radio' name='VISIT_RATE' value='V4' id='visitRate4'>
+<label for='visitRate4'>4 times per day or more</label>
+</li>
+
+<li class='question'>
+Which device do you use to access dankmaymays.com?<br>
+<input type='radio' name='DEVICE' value='DESKTOP' id='device1'>
+<label for='device1'>Desktop computer</label><br/>
+<input type='radio' name='DEVICE' value='LAPTOP' id='device2'>
+<label for='device2'>Laptop</label><br/>
+<input type='radio' name='DEVICE' value='MICROWAVE' id='device3'>
+<label for='device3'>Microwave oven</label><br/>
+<input type='radio' name='DEVICE' value='CELLPHONE' id='device4'>
+<label for='device4'>Cellphone</label><br/>
+<input type='radio' name='DEVICE' value='BRAINCHIP' id='device5'>
+<label for='device5'>Brain chip</label>
+</li>
+
+<li class='question'>
+Describe, in short, your past experience with memes.<br>
+<textarea name='PAST_EXPERIENCE' maxlength='1000' rows='4'></textarea>
+</li>
+
+<li class='question'>
+In order to confirm your identity, please check these doubles:<br>
+<center>
+<div>
+<img src='dubs.gif' class='dubs' id='dubs1' />
+<img src='dubsnice.gif' class='dubs' id='dubs2' style='display:none;' />
+</div><br>
+<input type='checkbox' name='DUBS' onchange='checkDubs(this);'>
+</center>
+</li>
+
+<li class='question'>
+Rate your overall experience with the website, from 1 (completely appalled) to 10 (very much overjoyed).<br>
+<table class='rateTable' unselectable="on" onselectstart='return false;'>
+<tr class='radioRow'>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V1' id='experience1'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V2' id='experience2'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V3' id='experience3'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V4' id='experience4'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V5' id='experience5'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V6' id='experience6'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V7' id='experience7'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V8' id='experience8'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V9' id='experience9'></td>
+	<td class='radioCell'><input type='radio' name='EXPERIENCE' value='V10' id='experience10'></td>
+</tr>
+<tr class='scaleRow'>
+	<td class='scaleCell'><label for='experience1'>1</label></td>
+	<td class='scaleCell'><label for='experience2'>2</label></td>
+	<td class='scaleCell'><label for='experience3'>3</label></td>
+	<td class='scaleCell'><label for='experience4'>4</label></td>
+	<td class='scaleCell'><label for='experience5'>5</label></td>
+	<td class='scaleCell'><label for='experience6'>6</label></td>
+	<td class='scaleCell'><label for='experience7'>7</label></td>
+	<td class='scaleCell'><label for='experience8'>8</label></td>
+	<td class='scaleCell'><label for='experience9'>9</label></td>
+	<td class='scaleCell'><label for='experience10'>10</label></td>
+</tr>
+</table>
+</li>
+
+<li class='question'>
+How satisfied are you of dankmaymays.com's ecological footprint?<br>
+<table class='rateTable' unselectable="on" onselectstart='return false;'>
+<tr class='radioRow'>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V1' id='ecology1'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V2' id='ecology2'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V3' id='ecology3'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V4' id='ecology4'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V5' id='ecology5'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V6' id='ecology6'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V7' id='ecology7'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V8' id='ecology8'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V9' id='ecology9'></td>
+	<td class='radioCell'><input type='radio' name='ECOLOGY' value='V10' id='ecology10'></td>
+</tr>
+<tr class='scaleRow'>
+	<td class='scaleCell'><label for='ecology1'>1</label></td>
+	<td class='scaleCell'><label for='ecology2'>2</label></td>
+	<td class='scaleCell'><label for='ecology3'>3</label></td>
+	<td class='scaleCell'><label for='ecology4'>4</label></td>
+	<td class='scaleCell'><label for='ecology5'>5</label></td>
+	<td class='scaleCell'><label for='ecology6'>6</label></td>
+	<td class='scaleCell'><label for='ecology7'>7</label></td>
+	<td class='scaleCell'><label for='ecology8'>8</label></td>
+	<td class='scaleCell'><label for='ecology9'>9</label></td>
+	<td class='scaleCell'><label for='ecology10'>10</label></td>
+</tr>
+</table>
+</li>
+
+<li class='question'>
+Which is your favorite webpage on dankmaymays.com?<br>
+<select name='FAVORITE_PAGE'>
+<option value=""></option>
+<option value='homepage'>Home</option><option value='swamp'>The Swamp</option><option value='bane'>Bane</option><option value='myspace'>MySpace</option><option value='lel'>Lel</option><option value='donut'>Pastries</option><option value='dubs'>Dubs</option><option value='anime'>Anime</option><option value='music'>Music</option><option value='culture'>Culture</option><option value='kevin'>Kevin</option><option value='elements'>Lelements</option><option value='s4stan'>[s4s]-tan</option><option value='yee'>Yee</option><option value='dose'>Dose</option><option value='birds'>Birds</option><option value='froge'>Froge</option><option value='bean'>Bean</option><option value='graveyard'>Graveyard</option><option value='awoo'>Awoo</option><option value='spooky'>Spook</option><option value='doge'>Doge</option><option value='honk'>Honk</option><option value='robot'>Robot</option><option value='knishes'>Knishes</option><option value='he'>HE</option><option value='brothermanbill'>Bill</option><option value='pardo'>Pardo</option><option value='lemonline'>Lemonline</option><option value='smugzone'>Smug</option><option value='sponsors'>Sponsors</option><option value='ses'>Suddenly</option><option value='vodka'>Vodka</option><option value='buneraven'>Bune Raven</option><option value='weed'>420</option><option value='walruse'>Walruse</option><option value='ass'>Ass</option><option value='tread'>Tread</option><option value='thirdking'>Third King</option><option value='wildcard'>Wildcard</option><option value='badtime'>Bad Time</option><option value='mallcop'>Mall Cop</option><option value='nice'>Nice Page</option><option value='fashion'>Fashion</option><option value='sonic'>Sonic</option><option value='ciass'>CIAss</option><option value='fortune'>Fortune</option><option value='foodgore'>Food Gore!</option><option value='fef'>Fef</option><option value='snekcourt'>Snake Court</option><option value='cade'>Cade</option><option value='secret'>Secret</option><option value='flash'>Flash</option><option value='suggestionbox'>Suggestions</option></select>
+</li>
+
+<li class='question'>
+What in particular do you like about this page?<br>
+<textarea name='FAVORITE_DETAILS' maxlength='500' rows='2'></textarea>
+</li>
+
+<li class='question'>
+Which is your least favorite webpage on dankmaymays.com?<br>
+<select name='HATED_PAGE'>
+<option value=""></option>
+<option value='homepage'>Home</option><option value='swamp'>The Swamp</option><option value='bane'>Bane</option><option value='myspace'>MySpace</option><option value='lel'>Lel</option><option value='donut'>Pastries</option><option value='dubs'>Dubs</option><option value='anime'>Anime</option><option value='music'>Music</option><option value='culture'>Culture</option><option value='kevin'>Kevin</option><option value='elements'>Lelements</option><option value='s4stan'>[s4s]-tan</option><option value='yee'>Yee</option><option value='dose'>Dose</option><option value='birds'>Birds</option><option value='froge'>Froge</option><option value='bean'>Bean</option><option value='graveyard'>Graveyard</option><option value='awoo'>Awoo</option><option value='spooky'>Spook</option><option value='doge'>Doge</option><option value='honk'>Honk</option><option value='robot'>Robot</option><option value='knishes'>Knishes</option><option value='he'>HE</option><option value='brothermanbill'>Bill</option><option value='pardo'>Pardo</option><option value='lemonline'>Lemonline</option><option value='smugzone'>Smug</option><option value='sponsors'>Sponsors</option><option value='ses'>Suddenly</option><option value='vodka'>Vodka</option><option value='buneraven'>Bune Raven</option><option value='weed'>420</option><option value='walruse'>Walruse</option><option value='ass'>Ass</option><option value='tread'>Tread</option><option value='thirdking'>Third King</option><option value='wildcard'>Wildcard</option><option value='badtime'>Bad Time</option><option value='mallcop'>Mall Cop</option><option value='nice'>Nice Page</option><option value='fashion'>Fashion</option><option value='sonic'>Sonic</option><option value='ciass'>CIAss</option><option value='fortune'>Fortune</option><option value='foodgore'>Food Gore!</option><option value='fef'>Fef</option><option value='snekcourt'>Snake Court</option><option value='cade'>Cade</option><option value='secret'>Secret</option><option value='flash'>Flash</option><option value='suggestionbox'>Suggestions</option></select>
+</li>
+
+<li class='question'>
+What in particular do you dislike about this page?<br>
+<textarea name='HATED_DETAILS' maxlength='500' rows='2'></textarea>
+</li>
+</ol>
+<div id='intermission'>
+<center>
+<h1 class='intermission'>INTERMISSION!</h1>
+<img src='dog.jpg' id='intermission' /><br>
+<h2 id='intermission'>lol....</h2>
+<h1 class='intermission'>INTERMISSION OVER!</h1>
+</center>
+</div>
+
+<ol id='questions' type='1' start='13'>
+
+<li class='question'>
+How did you find dankmaymays.com?<br>
+<input type='radio' name='REFERRER' value='FRIEND' id='referrer1'>
+<label for='referrer1'>Recommended by a friend</label><br/>
+<input type='radio' name='REFERRER' value='DOCTOR' id='referrer2'>
+<label for='referrer2'>Recommended by my doctor</label><br/>
+<input type='radio' name='REFERRER' value='TV' id='referrer3'>
+<label for='referrer3'>TV ad</label><br/>
+<input type='radio' name='REFERRER' value='ZEZ' id='referrer4'>
+<label for='referrer4'>zez</label><br/>
+</li>
+
+<li class='question'>
+Do you wish to share your thoughts on <a href='cowe.jpg' target='_blank'>cowe</a>?<br>
+<input type='radio' name='COWE' value='YES' id='cowe1' onchange="cowe(1);"">
+<label for='cowe1'>Yes</label>
+<input type='radio' name='COWE' value='NO' id='cowe2' onchange="cowe(0);">
+<label for='cowe2'>No</label><br>
+<div id='coweCont' style='display:none;'>
+	Are they nice?<br>
+	<input type='radio' name='COWE_CONT' value='YES' id='coweCont1' onchange="cowe(3);"">
+	<label for='coweCont1'>Yes</label>
+	<input type='radio' name='COWE_CONT' value='NO' id='coweCont2' onchange="cowe(2);">
+	<label for='coweCont2'>No</label><br>
+	<div id='coweContNotNice' style='display:none;'>Then please keep them to yourself!</div>
+	<div id='coweContNice' style='display:none;'>
+		<textarea id='coweThoughts' name='COWE_THOUGHTS' maxlength='1000' rows='4'></textarea>
+	</div>
+</div>
+</li>
+
+<li class='question'>
+How would you describe your perfect meme? Try to be as descriptive as possible, this information helps us provide you with better service in the future.<br>
+<textarea name='PERFECT_MEME' maxlength='1000' rows='4'></textarea>
+</li>
+
+<li class='question'>
+BAVI vs. BANTI?<br>
+<input type='radio' name='BIRDS' value='BAVI' id='birds1'>
+<label for='birds1'>Birds Are Very Important</label><br/>
+<input type='radio' name='BIRDS' value='BANTI' id='birds2'>
+<label for='birds2'>Birds Are Not That Important</label><br/>
+</li>
+
+<li class='question'>
+hey that's pretty cool. Everyone told me though when I had a mustache I let it be too wide. Do you have a grooming guide for them?<br>
+<textarea name='MUSTACHE' maxlength='500' rows='2'></textarea>
+</li>
+
+<li class='question'>
+Where do you see yourself in 5 years?<br>
+<textarea name='FIVE_YEARS' maxlength='500' rows='2'></textarea>
+</li>
+
+<li class='question'>
+Would you like to attach this picture of le teeth girl to your survey answers?<br/>
+<img src='teethgirl.jpg' /><br>
+<input type='radio' name='TEETH_GIRL' value='YES' id='teechGirl1'>
+<label for='teechGirl1'>Yes</label><br/>
+<input type='radio' name='TEETH_GIRL' value='NO' id='teechGirl2'>
+<label for='teechGirl2'>No</label>
+</li>
+
+<li class='question'>
+Any further comments?<br>
+<textarea name='COMMENTS' maxlength='1000' rows='4'></textarea>
+</li>
+
+</ol>
+<input type='submit'>
+</form>
+</body>
+</html>

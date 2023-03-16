@@ -1,0 +1,31 @@
+﻿body
+{
+}
+
+#dubscounter
+{
+    font-size: 250px;
+    border-style: double;
+    border-width: 3px;
+    background-color: #772176;
+    width: 1000px;
+    background-size: 100%;
+}
+
+.dubstable
+{
+    margin-top: 25px;
+    border-style: solid;
+    text-align: center;
+    font-size: 22px;
+}
+
+.tablecell
+{
+    width: 270px;
+}
+
+.tablerow
+{
+    
+}

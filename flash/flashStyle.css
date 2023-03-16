@@ -1,0 +1,51 @@
+﻿body
+{
+    color: #FFFFFF;
+    background-color: #6F1A1A;
+}
+
+
+a.flashLink:link
+{
+    color: #0000EE;
+    margin-left: 2px;
+}
+
+a.flashLink:visited
+{
+    color: #0000EE;
+    margin-left: 2px;
+}
+
+table#flashTable
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+    height: 20px;
+}
+
+td.filename
+{
+    width: 500px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    padding: 1px;
+    border-collapse: collapse;
+    height: 20px;
+}
+
+td.filesize
+{
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    border-collapse: collapse;
+}

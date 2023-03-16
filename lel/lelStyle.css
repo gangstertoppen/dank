@@ -1,0 +1,21 @@
+﻿body 
+{
+    background-color:White;
+    color:Black;
+}
+
+a:link
+{
+    color: Blue;
+}
+
+a:visited
+{
+    color: Blue;
+}
+
+#currentpage
+{
+    color: Black;
+    text-decoration: underline;
+}

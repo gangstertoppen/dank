@@ -1,0 +1,119 @@
+﻿body
+{
+    background-color: #B0BF1A;
+    color: #754A00;
+    background-image: url("Shrek2small.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-size: 27%;
+}
+
+textarea
+{
+    resize: vertical;
+}
+
+select
+{
+    width: 160px;
+}
+
+hr
+{
+    color: green;
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.board
+{
+    font-size: 15pt;
+}
+
+.thread
+{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-width: 3px;
+    border-color: #146F00;
+    border-style: solid;
+    background-color: rgba(196, 223, 72, 0.8);
+    padding: 5px;
+}
+
+.postnum
+{
+    font-weight: bolder;
+}
+
+.postername
+{
+    font-weight: bolder;
+    color: #01660E;
+}
+
+.postmessage
+{
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+#\31 000
+{
+    background-image: url("confetti.png");
+    background-size: cover;
+    border-color: #FFFC00;
+    border-style: dotted;
+}
+
+#\32 000
+{
+    background-image: url("confetti.png");
+    background-size: cover;
+    border-color: #FFFC00;
+    border-style: dotted;
+}
+
+#\32 222
+{
+    background-image: url("confetti.png");
+    background-size: cover;
+    border-color: #FFFC00;
+    border-style: dotted;
+}
+
+#\33 000
+{
+    background-image: url("confetti.png");
+    background-size: cover;
+    border-color: #FFFC00;
+    border-style: dotted;
+}
+
+#\33 333
+{
+    background-image: url("confetti.png");
+    background-size: cover;
+    border-color: #FFFC00;
+    border-style: dotted;
+}
+
+table#pagesRow
+{
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border-width: 3px;
+    border-color: #146F00;
+    border-style: solid;
+    background-color: rgba(196, 223, 72, 0.8);
+    padding: 10px;
+    padding-top: 5px;
+}

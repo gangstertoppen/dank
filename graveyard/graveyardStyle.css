@@ -1,0 +1,73 @@
+﻿body
+{
+    background-color: #808080;
+    color: #A0A0A0;
+}
+
+#currentpage
+{
+    color: inherit;
+}
+
+a:link
+{
+    color: #B2B2B2;
+}
+
+a:visited
+{
+    color: #B2B2B2;
+}
+
+#graveyardContainer
+{
+    width: 1000px;
+    height: 594px;
+    padding: 0;
+    background-image: url("graveyard.png");
+}
+
+.link
+{
+    display: block;
+    position: relative;
+}
+
+#skeletonLink
+{
+    top: 254px;
+    left: -23px;
+    height: 73px;
+    width: 204px;
+}
+
+#motLink
+{
+    width: 76px;
+    height: 100px;
+    top: 263px;
+    left: 122px;
+}
+
+#pepeLink
+{
+    width: 70px;
+    height: 87px;
+    top: 147px;
+    left: -163px;
+}
+
+#neutonLink
+{
+    width: 65px;
+    height: 87px;
+    top: 65px;
+    left: -361px;
+}
+
+img
+{
+    border-style: solid;
+    border-width: 3px;
+    border-color: #A0A0A0;
+}

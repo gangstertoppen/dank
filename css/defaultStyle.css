@@ -1,0 +1,72 @@
+﻿/* Start http://www.cursors-4u.com  body, a:hover {cursor: url(http://cur.cursors-4u.net/toons/too-9/too914.ani), url(http://cur.cursors-4u.net/toons/too-9/too914.png), progress !important;} /* End http://www.cursors-4u.com */
+
+body
+{
+    background-color: #9A12B3;
+    color: #14C400;
+    font-family:Serif;
+}
+
+.sitetitle
+{
+    font-size: 107px;
+    margin-bottom:6px;
+}
+
+.hotbar
+{
+    font-size: 15px;
+    text-align:center;
+    margin-top:-10px;
+}
+
+.hbseperator
+{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.hblimiter
+{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#currentpage
+{
+    color: white;
+    text-decoration: underline;
+}
+
+a:link
+{
+    color: #FFFF00;
+}
+
+a:visited
+{
+    color: #FFFF00;
+}
+
+.postingzone
+{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 3px;
+    border-color: green;
+    padding: 4px;
+    border-style: double;
+    padding-right: 10px;
+}
+
+#messageTextBox
+{
+    width: 500px;
+    margin-top: 2px;
+}
+
+#nameTextBox
+{
+    width: 350px;
+}

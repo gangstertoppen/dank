@@ -1,0 +1,72 @@
+﻿body
+{
+    color: #FFFFFF;
+    background-color: #001199;
+}
+
+div#explanation
+{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    text-align: center;
+}
+
+div#posting
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 500px;
+    border-style: double;
+    border-color: white;
+    padding: 5px;
+    border-width: 3px;
+}
+
+input#emailTextbox
+{
+    width: 362px;
+}
+
+textarea#suggestionTextbox
+{
+    width: 360px;
+    height: 204px;
+}
+
+td.postingtableleftcell
+{
+    width: 125px;
+}
+
+input#submitButton
+{
+    width: 90px;
+}
+
+div#postbackMessage
+{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 38px;
+    width: 600px;
+    text-align: center;
+}
+
+div#dataContainer
+{
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    width: 800px;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 10px;
+    font-family: monospace;
+    background-color: #001569;
+}

@@ -1,0 +1,14 @@
+/* Scroller Box */
+#scroller_container1, #scroller_container2, #scroller_container3, #scroller_container4, #scroller_container5 {
+ width: 1200px;
+ height: 60px;
+ overflow: hidden;
+}
+
+/* CSS Hack Safari */
+#dummy {;# }
+
+#scroller_container1, #scroller_container2, #scroller_container3, #scroller_container4, #scroller_container5 {
+ overflow: auto;
+}
+/* Scoller Box */

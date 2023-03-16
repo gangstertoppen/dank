@@ -1,0 +1,98 @@
+﻿body {
+    background-color: #B0BF1A;
+    color: #754A00;
+    background-image: url("Shrek2small.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-size: 27%;
+}
+
+form {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    /* padding-right: 10px; */
+    border: double 3px #008000;
+}
+
+input#name {
+    width: 350px;
+}
+
+textarea#message {
+    resize: vertical;
+    width: 500px;
+    margin-top: 2px;
+}
+
+hr {
+    color: #008000;
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+div#board {
+    font-size: 15pt;
+}
+
+div.thread {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid 3px #146F00;
+    background-color: #C4DF48;
+    background-color: rgba(196, 223, 72, 0.8);
+    padding: 5px;
+}
+
+span.postnum {
+    font-weight: bolder;
+}
+
+span.postername {
+    font-weight: bolder;
+    color: #01660E;
+}
+
+span.postdate {}
+
+span.admin { color: #FF0000; }
+span.honoruser { color: #00ccb7; }
+
+div.postmessage {
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+span.deleted {
+    color:#8A8A8A;
+}
+
+span.banned {
+    color: #FF0000;
+    font-family: sans-serif;
+}
+
+img.selected {}
+
+span.greentext { color:#789922; }
+span.orangetext { color:#EC9205; }
+
+span.priv { font-style:italic; }
+
+div#p1000 {
+    border-color: #FFBC00;
+    background-color: rgba(255, 249, 64, 0.8);
+}
+
+div#p1000 .postnum {
+    font-weight: bolder;
+    color: #FF0000;
+}

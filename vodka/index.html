@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Водка</title>
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+<link href="/default.css" rel="stylesheet" />
+<style>
+	body {
+		background-color: #DDDDDD;
+	    color: #FF0000;
+	    background-image: url('1376055129469.jpg');
+	    background-repeat: repeat-y;
+	    background-position: top center;
+	}
+
+	img.vodka {
+		margin-bottom: 500px;
+    	box-shadow: 0px 0px 0px 3px #FFFFFF,
+    				0px 0px 0px 6px #0000FF,
+    				0px 0px 0px 9px #FF0000;
+	}
+
+	a:link { color:#0000FF; }
+	a:visited { color:#0000FF; }
+	td.currentpage { color: #FFFFFF; }
+</style>
+
+<script type="text/javascript">
+    var x = 0;
+
+    function changecolors() {
+        x = 2;
+        setInterval(change, 200);
+    }
+
+    function change() {
+        if (x == 1) {
+            c1 = "#FFFFFF";
+            c2 = "#0000FF";
+            c3 = "#FF0000";
+            x = 2;
+        } else if (x == 2) {
+            c1 = "#FF0000";
+            c2 = "#FFFFFF";
+            c3 = "#0000FF";
+            x = 3;
+        } else {
+            c1 = "#0000FF";
+            c2 = "#FF0000";
+        	c3 = "#FFFFFF";
+        	x = 1;
+        }
+
+        try {
+            document.getElementsByClassName("currentpage")[0].style.color = c1;
+        } catch(err) {}
+        document.body.style.color = c2;
+        var anchors = document.querySelectorAll("a");
+        for (i = 0; i < anchors.length; i++) {
+            anchors[i].style.color = c3;
+        }
+        var imgs = document.querySelectorAll("img.vodka");
+        for (i = 0; i < imgs.length; i++) {
+            imgs[i].style.boxShadow = "0px 0px 0px 3px " + c1 + ", 0px 0px 0px 6px " + c2 + ", 0px 0px 0px 9px " + c3;
+        }
+    }
+
+    changecolors();
+</script>
+</head>
+
+
+
+<body>
+<audio src="vodka.mp3" type="audio/mpeg" autoplay loop></audio>
+<center><br/><div class='pagetitle'>Водка</div><img src='/cade/cade1.gif' style='display:none;'><img src='/cade/cade2.gif' style='display:none;'><table class='hotbar'><tr><td class='limiter'>-{</td><td><a href='/'>Home</a></td><td class='seperator'>✣</td><td><a href='/swamp'>The Swamp</a></td><td class='seperator'>✣</td><td><a href='/bane'>Bane</a></td><td class='seperator'>✣</td><td><a href='http://esfores.bandcamp.com/' target='_blank'>MySpace</a></td><td class='seperator'>✣</td><td><a href='/lel'>Lel</a></td><td class='seperator'>✣</td><td><a href='/donut'>Pastries</a></td><td class='seperator'>✣</td><td><a href='/dubs'>Dubs</a></td><td class='seperator'>✣</td><td><a href='/anime'>Anime</a></td><td class='seperator'>✣</td><td><a href='/music'>Music</a></td><td class='seperator'>✣</td><td><a href='/culture'>Culture</a></td><td class='seperator'>✣</td><td><a href='/kevin'>Kevin</a></td><td class='seperator'>✣</td><td><a href='/elements'>Lelements</a></td><td class='seperator'>✣</td><td><a href='/s4stan'>[s4s]-tan</a></td><td class='seperator'>✣</td><td><a href='/yee'>Yee</a></td><td class='seperator'>✣</td><td><a href='/dose'>Dose</a></td><td class='seperator'>✣</td><td><a href='/birds'>Birds</a></td><td class='seperator'>✣</td><td><a href='/froge'>Froge</a></td><td class='seperator'>✣</td><td><a href='/bean'>Bean</a></td><td class='seperator'>✣</td><td><a href='/graveyard'>Graveyard</a></td><td class='limiter'>}-</td></tr></table><table class='hotbar'><tr><td class='limiter'>-{</td><td><a href='/awoo'>Awoo</a></td><td class='seperator'>✣</td><td><a href='/spooky'>Spook</a></td><td class='seperator'>✣</td><td><a href='/doge'>Doge</a></td><td class='seperator'>✣</td><td><a href='/honk'>Honk</a></td><td class='seperator'>✣</td><td><a href='/robot'>Robot</a></td><td class='seperator'>✣</td><td><a href='/knishes'>Knishes</a></td><td class='seperator'>✣</td><td><a href='/he'>HE</a></td><td class='seperator'>✣</td><td><a href='/brothermanbill'>Bill</a></td><td class='seperator'>✣</td><td><a href='/pardo'>Pardo</a></td><td class='seperator'>✣</td><td><a href='/lemonline'>Lemonline</a></td><td class='seperator'>✣</td><td><a href='/smugzone'>Smug</a></td><td class='seperator'>✣</td><td><a href='/sponsors'>Sponsors</a></td><td class='seperator'>✣</td><td><a href='/ses'>Suddenly</a></td><td class='seperator'>✣</td><td class='currentpage'>Vodka</td><td class='seperator'>✣</td><td><a href='/buneraven'>Bune Raven</a></td><td class='seperator'>✣</td><td><a href='/weed'>420</a></td><td class='seperator'>✣</td><td><a href='/walruse'>Walruse</a></td><td class='seperator'>✣</td><td><a href='/ass'>Ass</a></td><td class='seperator'>✣</td><td><a href='/tread'>Tread</a></td><td class='limiter'>}-</td></tr></table><table class='hotbar'><tr><td class='limiter'>-{</td><td><a href='/thirdking'>Third King</a></td><td class='seperator'>✣</td><td><a href='/wildcard'>Wildcard</a></td><td class='seperator'>✣</td><td><a href='/badtime'>Bad Time</a></td><td class='seperator'>✣</td><td><a href='/mallcop'>Mall Cop</a></td><td class='seperator'>✣</td><td><a href='/nice'>Nice Page</a></td><td class='seperator'>✣</td><td><a href='/fashion'>Fashion</a></td><td class='seperator'>✣</td><td><a href='/sonic'>Sonic</a></td><td class='seperator'>✣</td><td><a href='/ciass'>CIAss</a></td><td class='seperator'>✣</td><td><a href='/fortune'>Fortune</a></td><td class='seperator'>✣</td><td><a href='/foodgore'>Food Gore!</a></td><td class='seperator'>✣</td><td><a href='/fef'>Fef</a></td><td class='seperator'>✣</td><td><a href='/snekcourt'>Snake Court</a></td><td class='seperator'>✣</td><td><script src='/scripts/cade.js' type='text/javascript'></script><a href='javascript:void(0)' onclick='addCade()'>Cade</a></td><td class='seperator'>✣</td><td><a href='/secret'>Secret</a></td><td class='seperator'>✣</td><td><a href='/flash'>Flash</a></td><td class='seperator'>✣</td><td><a href='/suggestionbox'>Suggestions</a></td><td class='limiter'>}-</td></tr></table><br/></center><center>
+<img src='s00.jpg' class='vodka' /><br/>
+<img src='d01.gif' class='vodka' /><br/>
+<img src='s01.jpg' class='vodka' /><br/>
+<img src='s02.jpg' class='vodka' /><br/>
+<img src='s03.jpg' class='vodka' /><br/>
+<img src='s04.jpg' class='vodka' /><br/>
+<img src='s05.jpg' class='vodka' /><br/>
+<img src='d02.gif' class='vodka' /><br/>
+<img src='s06.jpg' class='vodka' /><br/>
+<img src='s07.jpg' class='vodka' /><br/>
+<img src='s08.jpg' class='vodka' /><br/>
+<img src='d03.gif' class='vodka' /><br/>
+<img src='s09.jpg' class='vodka' /><br/>
+<img src='s10.jpg' class='vodka' /><br/>
+<img src='s10.gif' class='vodka' /><br/>
+<img src='s11.jpg' class='vodka' /><br/>
+<img src='d04.gif' class='vodka' /><br/>
+<img src='s12.jpg' class='vodka' /><br/>
+<img src='d05.gif' class='vodka' /><br/>
+<img src='s13.jpg' class='vodka' /><br/>
+<img src='s14.png' class='vodka' /><br/>
+<img src='d06.gif' class='vodka' /><br/>
+<img src='s16.jpg' class='vodka' /><br/>
+<img src='cheeky breeky.jpg' style="margin-bottom:80px;" /><br/>
+
+
+</center>
+</body>
+</html>

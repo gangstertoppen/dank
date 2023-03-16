@@ -1,0 +1,1197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+          anon a.k.a. Anonymous a.k.a. anonymous
+                  >> proudly presents <<
+      Smug Zone / #justwojakthings social media feed
+           * by anon/Anonymous/anonymous 2015 *
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<!--
+
+    This document ONLY contains the feed with no extra
+                  styling or decoration.
+
+Can be used as embedded item:
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe src="http://link.to.this.very.html" width=400px height=480px>
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+</body>
+</html>
+
+-->
+
+<!--
+      This is a fake social media feed of a meme character. It's based on the Smug Zone / #justwojakthings dual meme, and ideas and OC created by users of [s4s] and /r9k/ (and others).
+      Features:
+      - feed simulation with scrolling posts
+      - 200 unique comments (check 'em)
+      - dank memes from both boards (and some others!)
+      - tooltips
+      - realistic reaction simulation that emulates other social media users liking, sharing, etc. the posts in the feed
+      - post timers that update in real time
+      - fake profile summary
+      - posts with formatted text AND
+      - good documentation (>implying >whom am I quoting?)
+-->
+<title>Smug Zone / #justwojakthings</title>
+<!-- *************************
+      Stylesheet for tooltips
+     ************************* -->
+<style type="text/css">
+<!--
+.tooltip {
+  opacity:0.0;
+  position:absolute;
+  display: block;
+  font-family:"Arial", serif;
+  font-size:13px;
+}
+
+.tooltip:hover{
+  opacity:1.0;
+  position:absolute;
+  display: block;
+  background-color:black;
+  color:white;
+  font-family:"Arial", serif;
+  font-size:13px;
+}
+-->
+</style>
+<!-- ************************************
+      Stylesheet for misclelaneous items
+     ************************************ -->
+<style type="text/css">
+<!--
+
+/*
+   Note: Absolute positioning is used to keep the content inside the post rather than next to or after it.
+*/
+
+/* hashtag */
+.hashtagElem{
+  position:absolute;
+  top:115px;
+  left:175px;
+  width:200px;
+  height:15px;
+  font-family: "Georgia", sans;
+  font-size:12px;
+  color:#7f7fff;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+/* username */
+.nameElem{
+  position: absolute;
+  top: 15px;
+  left: 175px;
+  width: 100px;
+  height: 25px;
+  font-family: "Georgia", sans;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+/* user handle */
+.handleElem{
+  position:absolute;
+  top:42px;
+  left:175px;
+  width:100px;
+  height:25px;
+  font-family:"Georgia", sans;
+  font-size:9px;
+  color:#7f7f7f;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+/* comment field */
+.commentElem{
+  position:absolute;
+  top:57px;
+  left:160px;
+  width:225px;
+  height:55px;
+  font-family:"Arial", serif;
+  font-size:12px;
+  color:#000000;
+  overflow:auto;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+/* avatar */
+.avatarElem{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0
+}
+
+/* REACTION ELEMENTS */
+
+/* likes */
+.likesElem{
+  position:absolute;
+  top:132px;
+  left:180px;
+  width:40px;
+  height:15px;
+  font-family:"Georgia", sans;
+  font-size:13px;
+  color:#000000;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+/* shares */
+.sharesElem{
+  position:absolute;
+  top:132px;
+  left:220px;
+  width:40px;
+  height:15px;
+  font-family: "Georgia", sans;
+  font-size:13px;
+  color:#000000;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+/* favorites */
+.favesElem{
+  position:absolute;
+  top:132px;
+  left:260px;
+  width:40px;
+  height:15px;
+  font-family: "Georgia", sans;
+  font-size:13px;
+  color:#000000;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+/* upvotes */
+.upvotesElem{
+  position:absolute;
+  top:132px;
+  left:300px;
+  width:40px;
+  height:15px;
+  font-family:"Georgia", sans;
+  font-size:13px;
+  color:#000000;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+/* replies */
+.commentsElem{
+  position:absolute;
+  top:132px;
+  left:340px;
+  width:40px;
+  height:15px;
+  font-family:"Georgia", sans;
+  font-size:13px;
+  color:#000000;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+-->
+</style>
+<!-- *************************
+        Script for the feed
+     *************************
+     Most magic happens here!!
+     ************************* -->
+<script type="text/javascript">
+<!--
+
+/* =======================
+    SOME GLOBAL VARIABLES
+   ======================= */
+
+//
+// GLOBAL VARIABLES
+//
+var IMAGECOUNT = 5;       // number of posts in feed (the post objects are reused (and no new ones are created), so total post count will seem to be bigger when the feed is watched for some time)
+var imgObj = new Array(); // array of posts
+var feedSize = 0;         // sum of height of posts
+var animate ;             // post movement timer
+var moved = 0;            // how much the posts have been moved
+var moveAmount = 10;      // how much the posts are moved during one animation call
+var ys = new Array();     // array to store top coordinates of posts
+var times = new Array();  // times since posts have been made
+var pauseTimeMin = 2500;  // minimum time between posts
+var pauseTimeMax = 10000; // maximum time between posts
+
+// Contents of comments (avatars, hashtags, messages, usernames, likes, shares, etc.)
+var contents = []; // array for comment contents
+function content(imgBg, imgAvatar, strUsrname, strHandle, strHashtag, strComment, imgAvatarBig) {this.img = imgBg; this.avatar = imgAvatar; this.usrname = strUsrname; this.handle = strHandle; this.hashtag = strHashtag; this.comment = strComment; this.avatarBig = imgAvatarBig; this.likes = 0; this.shares = 0; this.faves = 0; this. upvotes = 0; this.comments = 0}; // "class"/"constructor" for comment content, the array above is filled with instances of these.
+
+
+/* ========================================
+    INITIALIZATION AND POST-INITIALIZATION
+   ======================================== */
+
+//
+// INIT FUNCTION
+//
+// This is called when page is loaded. The function pretty much only loads
+// images, and once all of them have been loaded, it calls postinit() to set up the "feed". 
+function init(){
+   var loaded = 0;    // number of loaded images
+
+   // Load and initialize content for all comments.
+   for(j=0;j<IMAGECOUNT;++j) {
+      var bgname = 'post.png';  // background image of comment. THE SIZE OF THE POST IS THE SIZE OF ITS BACKGROUND IMAGE!
+      var avatarname = 'avatar.png';  // user avatar
+      var avatarbigname = 'avatarbig.png';  // summary of user profile
+
+
+      // Load images.
+      /* In the onload function for each image, increment the loaded variable by one.
+         If it equals the number of posts multiplied by three (there are 3 images in each post: background, avatar and profile), call postinit(). The images need to be loaded before setting up the rest of the feed because the image dimensions are very important and needed later. The sizes can't be obtained until the images have been loaded. */
+
+      // Load background.
+      var curimg = new Image();
+      curimg.src = bgname;
+      curimg.id = "img"+j;
+      curimg.onload = function(){++loaded;if(loaded==IMAGECOUNT*3){postinit();}}
+
+      // Load avatar.
+      var curavatar = new Image();
+      curavatar.src = avatarname;
+      curavatar.id = "avatar"+j;
+      curavatar.onload = function(){++loaded;if(loaded==IMAGECOUNT*3){postinit();}}
+
+      // Load profile.
+      var curavatarbig = new Image();
+      curavatarbig.src = avatarbigname;
+      curavatarbig.id = "avatarbig"+j;
+      curavatarbig.onload = function(){++loaded;if(loaded==IMAGECOUNT*3){postinit();}}
+
+
+      // Set username, user handle and comment hashtag.
+      var curusrname = "Wojak";
+      var curhandle = "@tfwsmug";
+      var curhashtag = "#justwojakthings";
+
+      // Comment field is blank by default.
+      var curcomment = " ";
+
+      // Construct a content object using the loaded images, username, etc.
+      var c = new content(curimg, curavatar, curusrname, curhandle, curhashtag, curcomment, curavatarbig);
+
+      // Add the newly constructed object to the contents array.
+      contents.push(c);
+   }
+}
+
+//
+// "POST-INIT" FUNCTION
+//
+// This is called once all content has been loaded.
+// It sets up the social media feed.
+function postinit() {
+   var next_y = 0;  // the top coordinate of the next post
+   var totalH = 0;  // sum of post heights
+
+   // Calculate sum of post (post background image) heights.
+   for(i=0;i<IMAGECOUNT;++i)
+      totalH += contents[i].img.height;
+
+   /* The following two variables are used to set realistic times for first posts. */
+   // Get average height.
+   var avgH = totalH/IMAGECOUNT;
+   // Get velocity.
+   var velocity = moveAmount/waitTime;
+
+   // Create the posts for the feed.
+   for(i = 0; i < IMAGECOUNT; ++i) {
+      // This is the actual post.
+      imgObj[i] = document.createElement("myImage"+i);
+
+      // Attach the post to the feed container element.
+      document.getElementById("container").appendChild(imgObj[i]);
+
+
+
+      // Set stylesheet for the avatar image of the post.
+      contents[i].avatar.className = "avatarElem";
+
+      // Create handle, name, hashtag, comment, likes, shares, favorites, upvotes, replies by using a custom-made createTextItem function.
+
+      var handle = createTextItem("handle"+i, "handleElem", contents[i].handle);
+
+      var name = createTextItem("name"+i, "nameElem", contents[i].usrname);
+
+      var hashtag = createTextItem("hashtag"+i, "hashtagElem", contents[i].hashtag);
+
+      // Use "auto" as overflow setting, so scroll bars can be used if and only if the comment is "too big" for the post.
+      var comment = createTextItem("commentfield"+i, "commentElem", contents[i].comment);
+
+      var likes = createTextItem("likes"+i, "likesElem", contents[i].likes);
+
+      var shares = createTextItem("shares"+i, "sharesElem", contents[i].shares);
+
+      var faves = createTextItem("faves"+i, "favesElem", contents[i].faves);
+
+      var upvotes = createTextItem("upvotes"+i, "upvotesElem", contents[i].upvotes);
+
+      var comments = createTextItem("comments"+i, "commentsElem", contents[i].comments);
+
+
+      // Set id for the post and add a timer text which shows when the post was created.
+      // Timer values are relative, e.g. "now" or "15s ago".
+      /*
+         Note: Absolute positioning is used to keep the content inside the post rather than next to or after it.
+      */
+      imgObj[i].id = "myImage"+i;
+      imgObj[i].innerHTML = "<div id=timer"+i+" style=position:absolute;top:25px;left:300px;width:100px;height:25px;font-family:\"Verdana\",serif;font-size:16px; display: inline-block> !timer! </div>";
+
+      // Set timer value.
+      var par = document.getElementById("timer"+i);  // get timer text element
+      var timeElapsed = (avgH/velocity)/1000+        // calculate a realistic post time
+                        (next_y/velocity)/1000+      // the older the post, the lower it
+                        i*i+                         // is in the feed
+                        i*(randomPauseTime()/1000);
+      timeElapsed = timeElapsed.toFixed(1);          // rounding and cleanup in this
+                                                     // and some following lines
+      var firstpoint = timeElapsed[timeElapsed.indexOf(".")+1];
+      timeElapsed = parseFloat(timeElapsed);
+      if(parseFloat(firstpoint)%2==1)
+         timeElapsed = timeElapsed-0.1;
+      times[i] = timeElapsed*1000;
+      timeElapsed = timeElapsed.toFixed(0);
+      par.innerHTML = timeElapsed+' s ago';          // update timer text
+
+
+      // Append child objects (images, text objects) to the post.
+
+      imgObj[i].appendChild(contents[i].img);
+
+      imgObj[i].appendChild(contents[i].avatar);
+
+      imgObj[i].appendChild(name);
+      imgObj[i].appendChild(handle);
+      imgObj[i].appendChild(hashtag);
+      imgObj[i].appendChild(comment);
+
+      imgObj[i].appendChild(likes);
+      imgObj[i].appendChild(shares);
+      imgObj[i].appendChild(faves);
+      imgObj[i].appendChild(upvotes);
+      imgObj[i].appendChild(comments);
+
+
+      // Create tooltips for likes, shares, favorites, upvotes, and replies, by using custom createToolTip function. These tooltips appear when mouse is hovered over their respective icons and values. (The stylesheets for these are defined inside the <style> tags above this script.)
+      var tooltipLikes = createTooltip("ttLikes"+i, "Likes", "likes"+i, 36, 16, -20, 0);
+      var tooltipShares = createTooltip("ttShares"+i, "Shares", "shares"+i, 45, 16, -20, 0);
+      var tooltipFaves = createTooltip("ttFaves"+i, "Favorites", "faves"+i, 54, 16, -20, 0);
+      var tooltipUpvotes = createTooltip("ttUpvotes"+i, "Upvotes", "upvotes"+i, 50, 16, -20, 0);
+      var tooltipComments = createTooltip("ttComments"+i, "Comments", "comments"+i, 66, 16, -20, 0);
+
+      // Append the tooltips to the post.
+      imgObj[i].appendChild(tooltipLikes);
+      imgObj[i].appendChild(tooltipFaves);
+      imgObj[i].appendChild(tooltipShares);
+      imgObj[i].appendChild(tooltipUpvotes);
+      imgObj[i].appendChild(tooltipComments);
+
+
+      // Create profile summary objects.
+      // When mouse is hovered over the username or avatar in the post,
+      // a summary of the user profile is shown.
+
+      // Use a string as image here.
+      // Use parent stylesheet on mouse events.
+      var tooltipName = createTooltipBig("ttName"+i, "name"+i, "<img src="+contents[i].avatarBig.src+" alt=\"\">", imgObj[i]);
+
+      // Use an object as image here.
+      // DON'T use parent stylesheet on mouse events.
+      var tooltipAvatar = createTooltipBig("ttAvatar"+i, "avatar"+i, contents[i].avatarBig, imgObj[i]);
+
+
+      // Set a random comment to each post.
+      setComment(i);
+
+
+      // Position the post, place it below the previous ones in the feed.
+      imgObj[i].style.position= 'absolute'; 
+      imgObj[i].style.left = '0px'; 
+      imgObj[i].style.top = parseInt(next_y)+'px'; 
+
+      // Calculate the top position for the next post.
+      next_y += contents[i].img.height;
+
+      // Get the height of the field. The 2 may need to be changed to something else IF the number of posts or the height of the feed window is changed.
+      if(i == IMAGECOUNT - 2) feedSize = next_y;
+   }
+
+
+   timeup = setTimeout(updateTimers, waitTime);  // start updating the timers and timer texts of the posts
+   reacts = setTimeout(updateReacts,waitTime);   // start updating the reactions and reaction counters (timeout that controls when posts are "liked", "shared", etc.)
+
+   // Start updating the feed (move the posts), but after a little pause.
+   stopMovement();
+}
+
+
+/* ==============
+    TOOLTIP CODE
+   ============== */
+
+//
+// "STYLEONMOUSE"
+//
+// This function is called on mouse events of certain elements.
+// It changes style and parent of said elements.
+// It is used to show and hide profile summaries when mouse is over or exiting avatars or usernames in the feed.
+// Parameters:
+// -elemId = string; id of the element whose style is changed on mouse event (when mouse is over or leaving it)
+// -srcPosElem = element from which the position is taken
+// -srcDimsElem = element from which the dimensions are taken
+// -newParent = new parent element
+// -out = Boolean; true if function is called when mouse is over the element, false if mouse is leaving it
+function styleOnMouse(elemId, srcPosElem, srcDimsElem, newParent, out){
+   // Get the element which is changed.
+   var elem = document.getElementById(elemId);
+   // Set position.
+   elem.style.top = getComputedStyle(srcPosElem).top;
+   elem.style.left = getComputedStyle(srcPosElem).left;
+
+   // Set dimensions.
+   elem.style.width = getComputedStyle(srcDimsElem).width;
+   elem.style.height = getComputedStyle(srcDimsElem).height;
+
+   // Hide the element if mouse is leaving it; otherwise show it.
+   if(out == true) {
+      elem.style.backgroundColor = "transparent";
+      elem.children[0].style.visibility = "hidden";
+      elem.style.zIndex = 10;
+   } else {
+      elem.style.backgroundColor = "#000";
+      elem.style.zIndex = 101;
+      elem.children[0].style.visibility = "visible";
+   }
+
+
+   // Attempt to fit the object inside the window.
+
+   // Get how much of the object is inside the window.
+   var tempwt = 0, tempht = 0;
+   tempht = Math.min(window.innerHeight, newParent.getBoundingClientRect().bottom)-elem.getBoundingClientRect().bottom;
+   tempwt = Math.min(window.innerWidth, newParent.getBoundingClientRect().right)-elem.getBoundingClientRect().right;
+
+   // Get position offsets.
+   var offtop = -elem.getBoundingClientRect().top+parseInt(elem.originalTop);
+   var offleft = -elem.getBoundingClientRect().left+parseInt(elem.originalLeft);
+
+   // Add original positions to the "object inside window" amounts.
+   tempht += parseInt(elem.originalTop);
+   tempwt += parseInt(elem.originalLeft);
+
+   // If the parent element has a "top" attribute in its stylesheet, the element can be
+   // fit. Otherwise use the original top attribute of the element.  
+   if(elem.parentElement.style.top.length) {
+      // The bottom of the element is outside the window, reposition the element, so it's fully inside.
+      if(tempht < 0) elem.style.top = parseInt(elem.parentElement.style.top)+tempht+'px';
+      // The top of the element is outside the window, reposition the element, so it's fully inside.
+      else if(parseInt(elem.getBoundingClientRect().top) < 0) elem.style.top = Math.min(offtop, elem.parentElement.getBoundingClientRect().top)+'px';
+      // The element is already fully inside the window, just use the existing "top" property.
+      else elem.style.top = parseInt(elem.parentElement.style.top)+'px';
+      // Ensure the top of the object REALLY is visible.
+      if(parseInt(elem.style.top) < 0) elem.style.top = '0px';
+   } else {
+      elem.style.top = parseInt(elem.originalTop)+'px';
+   }
+
+
+   // Do the same as above, but use "left" attribute and width.
+   if(elem.parentElement.style.left.length) {
+      if(tempwt < 0) elem.style.left = parseInt(elem.parentElement.style.left)+tempwt+'px';
+      else if(parseInt(elem.getBoundingClientRect().left) < 0) elem.style.left = Math.min(offleft, elem.parentElement.getBoundingClientRect().left)+'px';
+      else elem.style.left = parseInt(elem.parentElement.style.left)+'px';
+      // Ensure the left of the object REALLY is visible.
+      if(parseInt(elem.style.left) < 0) elem.style.left = '0px';
+   } else {
+      elem.style.left = parseInt(elem.originalLeft)+'px';
+   }
+
+
+   // Append the element as a child to newParent.
+   newParent.appendChild(elem);
+}
+
+//
+// "CREATETOOLTIPBIG"
+//
+// Create a "big" tooltip object.
+// This is used to create the profile summary objects for the posters in the feed.
+// Parameters:
+// -tooltipId = string; the id of the tooltip which is created
+// -sourceId = source element from which position and dimensions are taken
+// -tipImage = the image which is shown when mouse is hovered over the element; can be string (HTML snippet with <img> tag) or object (image element)
+// -parentOnOut = parent element of the element when mouse leaves it
+// Returns:
+// -the created "big" tooltip object
+function createTooltipBig(tooltipId, sourceId, tipImage, parentOnOut){
+   // Create the element and assign an id to it.
+   var newTip = document.createElement("div");
+   newTip.id = tooltipId;
+
+   // Set position and dimensions.
+   newTip.style.top = getComputedStyle(document.getElementById(sourceId)).top;
+   newTip.style.left = getComputedStyle(document.getElementById(sourceId)).left;
+   newTip.style.width = getComputedStyle(document.getElementById(sourceId)).width;
+   newTip.style.height = getComputedStyle(document.getElementById(sourceId)).height;
+   newTip.style.position = "absolute";
+
+   // Store the original position. It will be needed in onmouseout events.
+   newTip.originalTop = parseInt(newTip.style.top)+'px';
+   newTip.originalLeft = parseInt(newTip.style.left)+'px';
+
+   newTip.style.margin = "0px 0px 0px 0px";
+   newTip.style.display = "block";
+   newTip.style.padding = 0;
+   newTip.style.border = 0;
+
+   // If the tooltip image is an object, append it.
+   // If it is a string, set it as inner HTML.
+   if(typeof tipImage == "object")
+      newTip.appendChild(tipImage);
+   else if(typeof tipImage == "string")
+      newTip.innerHTML = tipImage;
+
+   // Hide the tooltip by default (it's supposed to be seen only when mouse is over it),
+   // and append it to its default parent (which is parentOnOut, as mouse isn't over it).
+   var imgkid = newTip.children[0];
+   imgkid.style.visibility = "hidden";
+   parentOnOut.appendChild(newTip);
+
+   // Set the onmouseover event which shows the tooltip/image when mouse is over it.
+   /*
+      Notes:
+      -A closure is used to send the parameters correctly.
+      -The dimensions are taken from the tooltip image.
+      -The new parent is the main container of the feed.
+      -This is not an exit, or an onmouseout event.
+   */
+   document.getElementById(tooltipId).onmouseover=(function(objid, srcpos, srcdims, newparent, isout){
+      return function(){styleOnMouse(objid, srcpos, srcdims, newparent, isout);}
+   })(tooltipId, newTip, newTip.children[0], document.getElementById(tooltipId).parentElement.parentElement.parentElement, false);
+
+   // Set the onmouseout event which hides the tooltip/image when mouse is leaving it.
+   /*
+      Notes:
+      -A closure is used to send the parameters correctly.
+      -The dimensions are taken from the tooltip.
+      -The new parent is parentOnOut (which is the post from which the tooltip emerged).
+      -This IS an exit, or an onmouseout event.
+   */
+   document.getElementById(tooltipId).onmouseout=(function(objid, srcpos, srcdims, newparent, isout){
+      return function(){styleOnMouse(objid, srcpos, srcdims, newparent, isout);}
+   })(tooltipId, newTip, document.getElementById(sourceId), parentOnOut, true);
+
+   // Return the newly created tooltip element.
+   return newTip;
+}
+
+//
+// "CREATETOOLTIP"
+//
+// Create a tooltip object.
+// This is used to create text objects that are visible when mouse is over them.
+// In the feed, the likes, shares, favorites, upvotes, and replies fields of the posts have tooltips. Hovering mouse over them will show the names of the corresponding fields.
+// Parameters:
+// -id = string; tooltip id
+// -text = string; the tooltip text which is shown when mouse is over the tip
+// -tippableId = string; id of the object of which the tooltip is
+// -width = tooltip width
+// -height = tooltip height
+// -xOffset = number; offset value added to "left", in case the object position is not the desired tooltip position
+// -yOffset = number; offset value added to "top", in case the object position is not the desired tooltip position
+// Returns:
+// -the created tooltip object
+function createTooltip(id, text, tippableId, width, height, xOffset, yOffset) {
+   var item = document.createElement("div");  // Create the tooltip element.
+   item.id = id;  // Assign an id to it.
+   item.className = "tooltip";  // Set the class name, so the stylesheet for tooltips (defined above this script) is used. The stylesheet has color, font, and visibility attributes.
+   var tip = document.getElementById(tippableId);  // Get the element to which this tooltip is meant.
+   item.style.top = getComputedStyle(tip).top;    // Copy the y-position from it.
+   item.style.left = getComputedStyle(tip).left;  // Same for x-position.
+   if(xOffset != undefined && xOffset != 0)  // Apply offset if any.
+      item.style.left = (parseInt(item.style.left) + xOffset)+'px';
+   if(yOffset != undefined && yOffset != 0)  // Apply offset if any.
+      item.style.top = (parseInt(item.style.top) + yOffset)+'px';
+   item.style.width = parseInt(width)+'px';    // Set width.
+   item.style.height = parseInt(height)+'px';  // Set height.
+   var textNode = document.createTextNode(text);  // Create the text object for the tooltip element. This contains the tooltip text.
+   item.appendChild(textNode);  // Append the text object for the tooltip.
+   return item;  // Return the newly created tooltip element.
+}
+
+//
+// "CREATETEXTITEM"
+//
+// Creates a simple item that contains a text node.
+// Parameters:
+// -id = string; text item id
+// -classname = string; text item class
+// -text = string; text item text (now that's redundant)
+// Returns:
+// -the created text item?
+function createTextItem(id, classname, text){
+   var item = document.createElement("div");    // Create the text item (l)element.
+   item.id=id;    // Assign dat ID!
+   item.className = classname;    // Set class name.
+   var textNode = document.createTextNode(text);  // Create the text node with the text.
+   item.appendChild(textNode);  // Append the text node to the text item.
+   return item;   // Return the newly created text object item.
+}
+
+
+/* ======================================================
+    COMMENT SYSTEM (manage the actual content for posts)
+   ====================================================== */
+
+//
+// COMMENT VARIABLES (comments in posts)
+//
+
+// The yeardiff variable holds the difference of the current year and 1996.
+// It's used in a "1996 was X years ago" comment.
+var yeardiff = new Date().getFullYear()-1996;
+// All comments that can appear in the posts!
+// There are 200 comments in this array (Check 'em!).
+var comments = ['When you get smugged up.',
+'When you get dubdubs.',
+'When you\'re watching Tfwister and suddenly your feels change and you become smug.',
+'When you smugged up another person.',
+'When you watch Tfwister for the 100th (clear dubs) time.',
+'When you enter the CAPTCHA and it says you\'re not a robot.',
+'When you smug up yet another person.',
+'When your fortune is not that bad and it could be worse.'+'<br><br><font color=#ffcc00><b>Your fortune: Good Luck</b></font>',
+'When your smugness level is off the charts.',
+'When you always learn something new.',
+'When you find out what\'s in the Smug Zone beyond Le Smug League.',
+'smugsmug<br>zonezone<br>dubsdubs',
+'When Smug Zone becomes a timesink.',
+'Being smug.',
+'FEELS',
+'When your dual meme catches on.',
+'When you show Pepe your Tfwister DVD and he appreciates it.',
+'When you thank someone.',
+'When Tfwister is still your all-time favorite movie.',
+'When you have a persistent urge to \"F5\" a thread.',
+'When you lose your \"kissless virgin\" status to Dorothy.',
+'When a drive-in theater gets smugged up.',
+'When someone implies implications and makes a <font color=#7f7fff>#rude</font> yet funny post.',
+'When nobody probably reads your posts, but you don\'t even care.',
+'When watching Tfwister with a 24-pack of Wojak.',
+'When you\'re absolutely, totally, literally, L I T E R A L L Y, completely not samefigging.',
+'When sadmeme becomes smugmeme.',
+'When your meme combination is as daring as protein synthesis.',
+'When you know the Smug Zone inside-out.',
+'When I was a smug boy.',
+'When your thread is filled with comedy gold and it goes unseen, but you are too smug to care.',
+'When someone says they\'re chasing you but that\'s not a metaphor.',
+'All play and no work makes Wojak a smug boy.',
+'When you caused a dubs inflation.',
+'When the ride never ends.',
+'When there is a point where we needed to stop and we\'ve clearly passed it but let\'s keep going and see what happens.',
+'When you make a thread about Smug Zone.',
+'When someone says \"well meme\'d\" to you.',
+'When you create another Smug Zone thread.',
+'When your picture is added to KYM.',
+'When someone on a Bruneian rotoscoping mailing list says you have serious mental problems WHEN all you do is funpost or drink Wojak and watch Tfwister, sometimes with your friend Pepe.',
+'When being smug.',
+'When your dual meme is skyrocketing.',
+'When Smug Zone was NOT a mistake.',
+'When your diet mostly consists of Cheetos, Doritos, Topkek ...and Wojak.',
+'When. Just when.',
+'When you manage to turn a thread on an imageboard into what looks like a feed in social media.',
+'When out there is a jungle.',
+'When you realize 1996 was '+yeardiff+' years ago.',
+'When someone thanks you after gaining good feels and confidence when getting dragged into the Smug Zone.',
+'WHEN MODS STICKY YOUR THREAD.',
+'When feels are smugness.',
+'When feels and knowledge meet.',
+'SMUG ZONE',
+'When you crave sustenance.',
+'When being extra smug.',
+'When you are the final boss of an elite league.',
+'When you find some leftover tendies from the day before.',
+'When you are smugtacular.',
+' ',
+'When someone asks you to post them dank memes from the past three weeks and Smug Zone / #justwojakthings is one of them.',
+'When there is a Smug Zone song.',
+'When you would like to enter the Smug Zone with England.',
+'When you don\'t.',
+'When you have become a god.',
+'When your mom says to do your homework and you already did it on the bus.',
+'When they weren\'t around for new memes - and you were.',
+'When someone loves your meme.',
+'When you overcome ebola.',
+'When you prepare.',
+'When the Smug Zone song is finished and you love it.',
+'When we got cowes.',
+'When she\'s not in London, but actually in W(oj)akita.',
+'When the CAPTCHA asks you to select all hamburgers and you select some sandwiches and your selection is accepted.',
+'When you first see a cowe, then see \'nother one, and finally actually think it was the same one.',
+'When somebody asks you to have a drink, throws a bottle at you, you catch it and smug it right up!',
+'When you\'re the wonder of nature.',
+'When there are sensors, sensors everywhere.',
+'When there are two teams chasing you.',
+'When you smug up a cornfield.',
+'When you post a comment.',
+'When you hear a good song.',
+'When you have heard an epic drum solo.',
+'When you meet a qt.',
+'When you get good scores on your report card.',
+'When you find a dollar on the street.',
+'When the weather is nice outside.',
+'When your favourite band announces a new album.',
+'When you successfully tie your shoes.',
+'When you never cared - she wasn\'t even that smug.',
+'Welcome to the Smug Zone!<br>Now get smug!',
+'When you get that feel when you have no more bad feels. THANKS, SMUG ZONE',
+'When a Wojak outbreak smugs up millions.',
+'When you\'re feeling smug on your phone.',
+'When they\'ve only got themselves to blame.',
+'When being <font color=#7f7fff>#3smug5u</font>.',
+'When you got some extremely rare Smug Wojaks.',
+'When it\'s hip to be smug - because of you!',
+'When you say \"Well meme\'d\" to someone.',
+'When you create some dank maymays.',
+'When you fly through the Smug Zone.',
+'When someone posts a dank pic.',
+'When you smug them up.',
+'When you control the Smug Zone.',
+'When you post in an epic thread.',
+'When you don\'t care.',
+'When you\'re smug.',
+'█░░█░░░█░█░█░░░█████░░██░░░█░░░█░▄▄<br>█░██▐░▌█░█░█░█▀██████░██░█░█░█░█░░░<br>░░██▐░▌█░░░█░░░██████░░█░░░█░█░█░▀▀',
+'⠀⢠⠤⢠⢄⢤⢠⠀⢠⢠⠤⠤<br>⠐⠚⠀⠘⠈⠘⠘⠒⠚⠘⠒⠚<br>⠈⢹⣀⠰⣉⡱⢸⠱⣸⢸⣛⣉',
+'<font color=#0f0>&gt;that feel when you finish all your homework</font><br>source of quote: self',
+'When people accept your smugness.', // first 111 comments end here
+'When Smug Zone is back &ndash; and so is #justwojakthings!',
+'When you\'re posting feels.',
+'When we got piges.',
+'When you stay hydrated.',
+'When someone holds the door for you.',
+'When you check your fortune.'+'<br><br><font color=#cccc00><b>Your fortune: Average Luck</b></font>',
+'When you put on your kek suit and admire yourself in the mirror for a few moments.',
+'When over 90% of your posts begin with the word \"when\".',
+'When they think you\'re <font color=#7f7fff>#evil</font>.',
+'When you roll the maps instead of folding them.',
+'When your mom tells you to go to bed at 10:00 PM and you go at 9:59 PM.',
+'When posting on this site was ground to a halt.',
+'When you post this.',
+'When <font color=#7f7fff>@mods</font> are asleep, so you can post <font color=#7f7fff>#justwojakthings</font>.',
+'When you got all the 34476XX dubs.',
+'When you control the dubs.',
+'When you got a stream of dubs and wonder if it was all just a dream.',
+'When you grab some digits.',
+'When the board has slowed down &ndash; very probably because everybody is busy reading your feed.',
+'When he says he knows you like to feel feels, so he put a feel in your feel so you can feel while you feel.',
+'When you dream of a guy you sort of know being a janitor or a mod and banning you for spam.',
+'When someone checks your trips.',
+'When you are going to keep posting until you pass out.',
+'When you post like Duracell Bune (Raven).',
+'When your follower counter wraps around and says you have a negative number of followers.',
+'When it\'s happening.',
+'When people asked Smug Zone / #justwojakthings to be back &ndash; AND NOW IT IS!',
+'When you hear an epic guitar solo.',
+'When you think you\'re running out of ideas but suddenly come up with one more.',
+'When nature smugs.',
+'When <font color=#7f7fff>@CIAss</font> butts in on your conversation.',
+'When you notice your dual meme has become an inspirational snowclone &ndash; and you like it.',
+'When the whole community is tired of the word \"when\" &ndash; because of you!',
+'When you can\'t stop posting.',
+'When you can\'t stop browsing.',
+'When your toast has just the perfect color, taste, warmth and texture.',
+'When when.',
+'When you find a dime.',
+'When you find one more can of Wojak in your fridge.',
+'When you have become a legend.',
+'When senpai notices you.',
+'When you realize you\'re already on top so there\'s no senpai to notice you.',
+'When you listen to some dubstep.',
+'When a dual meme so double supreme you let out a twofold scream.',
+'When they can\'t distinguish life from a game.',
+'When commenting on stuff.',
+'When you\'re the 100th unique poster (check \'em).',
+'When it\'s Christmas time!!',
+'When nothing rustles your jimmies.',
+'When there no longer is such thing as subculture, only smugculture.',
+'When people post some OC you made.',
+'When you check an obscure GET.',
+'When you click the \"Submit\" button.',
+'When people admire your granite jaw.',
+'When your gingiva are in perfect condition.'+'<font color=#7f7fff><div style=\"font-size:12px;font-family:Georgia,sans;position:absolute;top:41px\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#gumszone</div></font>',
+'When dubsfest.',
+'When you\'ve got a warm face.',
+'When being smugcessful.',
+'When being smugscellent.',
+'When you went through a second puberty with \'roids.',
+'When palindrome.',
+'When you enter the CAPTCHA without any assistance.',
+'When somebody says \"well smugged\" to you.',
+'When you actually, seriously have vivid dreams of this thread being stickied.',
+'When you see (and check) unchecked dubs that have been got a long time ago.',
+'When it\'s a sunny day outside.',
+'By popular request!',
+'When you select all cakes.',
+'When you get that dank feel.',
+'When you remember to check your fortune.<br><font color=#ffcc00><b>Your fortune: Good Luck</b></font><br><font color=#7f7fff><div style=\"font-size:12px;font-family:Georgia,sans;position:absolute;top:41px\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#fortune</div></font>',
+'When you get away with pushing a tourist in front of a train.',
+'When you realize that not all dubs will be checked.',
+'When you repost the Lemon Line.',
+'When you go \"hmm\".',
+'When you select all birthday cakes even though it isn\'t your birthday.',
+'When your memes take over the world and <b>EVERYONE KNOWS THEM!</b>',
+'When your hashtag is #1 in [s4s]ial media.',
+'When <font color=#7f7fff>@swaglord</font> only wears a kek shirt &ndash; and you wear a full kek suit.',
+'When your social media site gets updated.',
+'When feels hit the fan.',
+'W A K I T A<br>A<br>K<br>I<br>T<br>A',
+'When everything went so RIGHT - TWICE!',
+'When everything went so smug.',
+'When it\'s stormy weather outside.',
+'When it\'s smug weather outside.',
+'When you look happy.',
+'When there\'s a point basically when you smug them up.<br><br>The Smug Zone!',
+'When you\'re really in love with yourself &ndash; and that\'s not a summer thing!',
+'When we got debris.'];
+// boolean array that holds which comments have been posted
+// it's reset when all values are true
+var commentsUsed = [];
+
+var lastCommentIdx = -1;     // The index of the previous comment
+var commentsInited = false;  // Has the initial comments been set?
+
+// Clear the array that holds which comments have been posted.
+function clearCommentUsages() {
+   for(cc=0;cc<comments.length;++cc) {
+      commentsUsed[cc] = false;
+   }
+}
+
+//
+// "SETCOMMENT"
+//
+// Set the comme(me)nt of the post.
+// Parameter:
+// -id = number; the id of the post whose comment is set.
+function setComment(id){
+   // Get the comment field of the post.
+   var elem = document.getElementById("commentfield"+id);
+
+   // Update the yeardiff variable, so even if someone is browsing the feed during New Year, the correct difference will be shown!
+   yeardiff = new Date().getFullYear()-1996;
+
+   // Check how many comments that are in the comment array have been posted.
+   var commentUsage = 0;
+   for(k=0;k<comments.length;++k)
+      if(commentsUsed[k]) commentUsage++;
+
+   // Check if all the comments in the comment array have been posted.
+   // Clear the "comment usage" array if they have.
+   var clearedComments = false;
+   if(commentUsage==comments.length) {
+      clearCommentUsages();
+      clearedComments = true;
+   }
+
+
+   // Get the index of a new comment.
+   // The comment will be read from this index of the comments array
+   // and used as the comment of the post.
+   var comment_idx = Math.floor((Math.random()*comments.length)+0);  // Randomly select a comment.
+   if(comments.length > 1) {  // If there is more than one comment in the array, check that the same one is not posted twice in a row. (This can happen when the comment usage array has been cleared.) This is to attempt to prevent too close reposts. It may not be 100% foolproof, but it's often close enough.
+      if(clearedComments || !commentsInited) {
+         while(lastCommentIdx == comment_idx) {
+            comment_idx = Math.floor((Math.random()*comments.length)+0);
+         }
+      }
+   }
+
+   // Check that the comment hasn't been posted already (before the usage array is cleared, that is). Get another comment if it has, until an unused comment is found.
+   while(commentsUsed[comment_idx] == true)
+   {
+      comment_idx = Math.floor((Math.random()*comments.length)+0);
+   }
+   commentsUsed[comment_idx] = true;  // Mark the current comment as used.
+   lastCommentIdx = comment_idx;  // Set the comment as last.
+
+   commentsInited = true;  // This function has been called at least once.
+
+
+   // Update the comment field of the post by using the selected comment.
+   elem.innerHTML = comments[comment_idx];
+}
+
+
+/* ======================================================================================
+    ANIMATION AND TIMER SYSTEMS (move and reset posts, and show and update posting times and reaction (e.g. likes) counters)
+   ====================================================================================== */
+
+//
+// ANIMATION VARIABLES
+//
+var timeup;  // timeout for post time updates
+var waitTime = 20*10;  // waiting period between updates (milliseconds)
+                       // NOTICE: This variable is used for ALL updates (post time updates, post animations (movement), reaction updates)!
+var TIMEELAPSEDSHOWDIGITS = 5;  // In the post time field, show "now" instead of post time for this many + 1 seconds.
+
+//
+// UPDATE FUNCTION FOR POST TIMES
+//
+function updateTimers(){
+   // Iterate through all posts in the feed.
+   for(var i = 0; i < IMAGECOUNT; ++i) {
+      times[i] += waitTime;  // Increase the post time of each post by wait time.
+      var par = document.getElementById("timer"+i);  // Get the post time field.
+      var timeElapsed = times[i]/1000;  // Convert post time from milliseconds to seconds.
+      timeElapsed = timeElapsed.toFixed(0);  // Set post time to an integer.
+
+      // If post is recent enough (newer than TIMEELAPSEDSHOWDIGITS seconds), display "now" instead of a "precise" post time in the text field.
+      if(timeElapsed <= TIMEELAPSEDSHOWDIGITS) {
+         par.innerHTML = 'now';
+      // Otherwise display the relative post time (e.g. "10 s ago").
+      } else {
+         // Convert the post time from seconds to minutes.
+         var timeElapsedMin = parseFloat(timeElapsed)/60;
+         // If one or more minutes have elapsed since the post was made, display the time in minutes and "m ago" after post time.
+         /*
+            With the current settings, the feed is pretty fast (usually more than one post per minute), so I didn't see the point in adding more conversions and display options (i.e. posts made 60 or more minutes but less than 24 hours ago would show the time in hours and " h ago", posts older than or as old as 24 hours but newer than a week/month/year would show the time in days and " d ago", etc.).
+         */
+         if(timeElapsedMin >= 1) {
+             par.innerHTML = Math.floor(timeElapsedMin)+' m ago';
+         }
+         // If less than a minute (but more than TIMEELAPSEDSHOWDIGITS seconds) has elapsed, display the time in seconds and "s ago" after post time.
+         else {
+             par.innerHTML = timeElapsed+' s ago';
+         }
+      }
+   }
+   // Set the timeout again, so the timers will be updated constantly.
+   timeup = setTimeout(updateTimers, waitTime);
+}
+
+//
+// POST MOVEMENT CODE
+//
+// Move the posts in the feed.
+function moveDown(){
+   var comp = 0; // "comparison" variable, holds the index of the post on top of the feed
+                 // used to check when the top post (the newest one) is fully visible and the feed can be stopped, as well as what is the newest comment
+
+   moved += moveAmount;  // Update the movement counter.
+
+   // Get the top coordinates of the posts.
+   for(var i = 0; i < IMAGECOUNT; ++i)
+      ys[i] = parseInt(imgObj[i].style.top);
+
+   // Get the index of the uppermost (newest) post.
+   for(var i = 0; i < ys.length; ++i) {
+      if(ys[i] < 0) {
+         comp = i;  // Store the index to comp.
+         break;
+      }
+   }
+
+
+   // Get the background image of the newest post.
+   var htimg = document.getElementById("img"+comp);
+
+
+   // If the feed hasn't moved at all or the newest (uppermost) post has fully become visible, stop the feed for some time (this simulates a cooldown or the owner of the feed being typing a new post or the owner doing something else).
+   if(moved == 0 || moved == htimg.height+moveAmount)
+   {
+      stopMovement();
+   }
+   // The feed is moving.
+   else
+   {
+      // Store the index of the comment of the newest post, to attempt to prevent the same comment from being posted twice in a row when the comment usage array is cleared.
+      // Again, may not be perfect but it's still close enough and a good system (FOR ME).
+      lastCommentIdx=0;  // reset the last comment index
+      var xyz = document.getElementById("commentfield"+comp); // Get the comment field of the newest post.
+      for(var ci = 0; ci < comments.length; ++ci) {  // Iterate through the comment array.
+         if(comments[ci] == xyz.innerHTML)  // If the comment in the current index matches that of the newest post, store the index to "last comment index", which is later checked in the setComment function.
+            lastCommentIdx = ci;
+      }
+
+      // Iterate through all posts.
+      for(var i = 0; i < IMAGECOUNT; ++i) {
+         // Move the post by updating the "top" attribute in its stylesheet.
+         imgObj[i].style.top = parseInt(imgObj[i].style.top) + moveAmount + 'px';
+
+         // If the post has moved out of sight (below the bottom edge of the container viewport), reset its contents, so it looks like a new one, and move it above the top edge of the container viewport.
+         if(parseInt(imgObj[i].style.top) > feedSize) {
+            var im = document.getElementById("img"+i);  // Get the background image.
+            imgObj[i].style.top = '-' + (parseInt(im.height)-moveAmount) + 'px';  // Move the post.
+            times[i] = 0;  // Reset the post time.
+            // Reset the reaction counters (likes, favorites, shares, upvotes, comments)
+            var kid = document.getElementById("likes"+i);
+            kid.innerHTML = '0';
+            kid = document.getElementById("faves"+i);
+            kid.innerHTML = '0';
+            kid = document.getElementById("shares"+i);
+            kid.innerHTML = '0';
+            kid = document.getElementById("upvotes"+i);
+            kid.innerHTML = '0';
+            kid = document.getElementById("comments"+i);
+            kid.innerHTML = '0';
+            // Select a new comment from the comment array and use it as the comment of this post.
+            setComment(i);
+         }
+      }
+      // Call this function again after waitTime milliseconds to keep the feed moving (or to stop it if necessary).
+      animate = setTimeout(moveDown, waitTime);
+   }
+}
+
+// :stopmusic:
+// Stop the post feed.
+function stopMovement(){
+   clearTimeout(animate);  // Clear the post movement timer.
+   animate = setTimeout(moveDown, randomPauseTime());  // Start the post movement timer after a random interval.
+   moved = 0;  // Reset the movement counter.
+}
+
+// Get a random pause time in milliseconds.
+function randomPauseTime(){
+   // Return a value between pauseTimeMin and pauseTimeMax.
+   return Math.floor((Math.random()*pauseTimeMax)+pauseTimeMin);
+}
+
+//
+// REACTION CODE
+//
+var reacts;  // reaction update timer
+var REACTPROBABILITYMAX = [0.3, 0.5, 0.2, 0.7, 0.05];  // array of probabilities for updates of various reaction types (from left to right: me... no... likes, shares, favorites, upvotes, replies aka comments)
+var REACTTIME = 3000;  // the minimum post time (in milliseconds) after which reactions can be updated for a post (posts newer than this don't get reactions)
+// Update reactions for posts
+function updateReacts(){
+   // Iterate through all possible reaction types (likes, shares, favorites, upvotes, replies).
+   for(var react = 0; react < REACTPROBABILITYMAX.length; ++react) {
+      // Randomly select a post from the feed.
+      var randidx = Math.floor((Math.random()*IMAGECOUNT)+0);
+      // Check if a random value is smaller than probability for the current reaction type.
+      if(Math.random() <= REACTPROBABILITYMAX[react]) {
+         // Check if the post is old enough for reactions.
+         if(parseInt(times[randidx]) > REACTTIME) {
+            // Select the appropriate reaction field.
+            var kidid = '';
+            switch(react) {
+            case 0:
+               kidid = 'likes';
+               break;
+            case 1:
+               kidid = 'shares';
+               break;
+            case 2:
+               kidid = 'faves';
+               break;
+            case 3:
+               kidid = 'upvotes';
+               break;
+            case 4:
+               kidid = 'comments';
+               break;
+            }
+            var kiddo = document.getElementById(kidid+parseInt(randidx));
+            // Increment the reaction counter by one (The post gets a new like, share, whatever).
+            var kiddohtml = parseInt(kiddo.innerHTML);
+            kiddo.innerHTML = (kiddohtml+1);
+         }
+      }
+   }
+   // Update the reactions again after a waiting period.
+   reacts = setTimeout(updateReacts,waitTime);
+}
+
+
+/* =============
+    ONLOAD CODE
+   ============= */
+
+// Run the init function when window is loaded.
+window.onload =init();
+//-->
+</script>
+<!-- ********************************
+      Stylesheet for feed containers
+     ******************************** -->
+<style type="text/css">
+<!--
+/* Main container for the feed. Change the "top" and "left" attributes to change the position of the feed. */
+#containercontainer {
+position:absolute;
+top: 0px; /* 200px; */ /* the commented values in this line and the one below are just for testing */
+left: 0px; /*400px;*/
+}
+/* Second container. The feed is inside this. */
+#container {
+padding: 0; margin: 0; border: 0;
+position: relative;
+width: 400px;
+height: 480px;
+overflow: hidden; /* hidden overflow, so posts outside the viewport can't be seen */
+}
+-->
+</style>
+</head>
+<body>
+<!-- ******************************************************************************** -->
+<!-- THE thing of the page! The social media feed! -->
+<!-- It begins HERE! -->
+<div id="containercontainer">
+  <noscript> lol you need JavaScript </noscript> <!-- Show this message if JS is disabled. JavaScript is very important. -->
+  <div id="container">
+  </div>
+</div>
+<!-- The social media feed ends HERE! -->
+<!-- ******************************************************************************** -->
+</body> <!-- das it mane -->
+</html>

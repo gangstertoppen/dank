@@ -1,0 +1,48 @@
+body {
+    background-color: #F0F0F0;
+    color: #000000;
+    font-family:Serif;
+}
+
+div.pagetitle {
+    font-size: 107px;
+    margin-bottom:6px;
+}
+
+a:link {
+    color: #FFFF00;
+}
+
+a:visited {
+    color: #FFFF00;
+}
+
+
+
+/* Hotbar */
+
+table.hotbar {
+    font-size: 13.5px;
+    text-align:center;
+    margin-top: -10px;
+    white-space: nowrap;
+}
+
+td.seperator {
+}
+
+td.limiter {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+td.currentpage {
+    color: white;
+    text-decoration: underline;
+}
+
+img.fixedcade {
+    position:fixed;
+    width:auto;
+    border:none;
+}
