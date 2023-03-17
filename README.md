@@ -7,3 +7,13 @@ when i can be assed
 This site is static only so swamp wont work for postings.
 
 op is a fig
+.
+-
+.
+.
+.
+ælk
+olppl
+plop
+l
+
